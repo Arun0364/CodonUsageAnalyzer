@@ -77,24 +77,33 @@ pip3 install biopython pandas seaborn matplotlib
 
 ## ⚙️ How It Works
 
-The workflow for codon usage analysis:
-```mermaid
-flowchart TD
-    A[Input FASTA file(s)] --> B[Parse DNA sequence]
-    B --> C[Count codons (triplets)]
-    C --> D[Calculate codon frequencies (%)]
-    D --> E[Export CSV results]
-    D --> F[Generate visualizations]
-    F --> F1[Barplots per sequence]
-    F --> F2[Heatmaps per sequence]
-    F --> F3[Comparison plots (two sequences)]
-    F --> F4[Difference heatmap]
-    E --> G[Outputs directory]
-    F1 --> G
-    F2 --> G
-    F3 --> G
-    F4 --> G
-```
+The Codon Usage Analyzer follows a simple step-by-step pipeline:
+
+### 1. Input FASTA file(s)
+
+* User provides one or two DNA coding sequences in FASTA format.
+
+### 2. Parse DNA sequence
+* The script reads the file and extracts the coding sequence.
+
+### 3. Count codons (triplets)
+* DNA sequence is split into non-overlapping codons (e.g., ATG | GTC | ...).
+* Each codon occurrence is tallied.
+
+### 4. Calculate codon frequencies (%)
+* Codon counts are normalized into percentage frequencies for comparison.
+
+### 5. Export results
+* A CSV file is generated with codon counts and frequencies.
+
+### 6. Generate visualizations
++ Barplots: Frequency distribution of codons
++ Heatmaps: Codon usage in codon table order
++ Comparison plots: Side-by-side codon usage (if two sequences are given)
++ Difference heatmaps: Frequency differences (Species 1 − Species 2)
+
+### 7. Save outputs
+* All CSVs and plots are written to the outputs/ directory.
 
 ---
 
