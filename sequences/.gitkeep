@@ -1,0 +1,3 @@
+# This placeholder file ensures the 'sequences/' directory is tracked by Git.
+# Place input FASTA files here (e.g., Human_HBB.fasta, Horse_HBB.fasta).
+# You can delete this file once the folder contains real sequences.
