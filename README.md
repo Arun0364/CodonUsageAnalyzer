@@ -78,7 +78,7 @@ pip3 install biopython pandas seaborn matplotlib
 ## ⚙️ How It Works
 
 The workflow for codon usage analysis:
-``` mermaid
+```mermaid
 flowchart TD
     A[Input FASTA file(s)] --> B[Parse DNA sequence]
     B --> C[Count codons (triplets)]
@@ -87,7 +87,7 @@ flowchart TD
     D --> F[Generate visualizations]
     F --> F1[Barplots per sequence]
     F --> F2[Heatmaps per sequence]
-    F --> F3[Comparison plots (2 sequences)]
+    F --> F3[Comparison plots (two sequences)]
     F --> F4[Difference heatmap]
     E --> G[Outputs directory]
     F1 --> G
